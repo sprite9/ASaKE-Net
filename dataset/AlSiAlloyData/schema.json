@@ -1,0 +1,32 @@
+[
+  {
+      "Con-Ele": 0, 
+      "Ele-Alloy": 1, 
+      "Alloy-Exp": 2, 
+      "Exp_r-Par_n": 3, 
+      "Exp-Par_n": 4, 
+      "Par_n-Par_v": 5, 
+      "Alloy-Test_n": 6, 
+      "Test_n-Test_f": 7, 
+      "Test_n-Test_v": 8, 
+      "Test_n-Phase": 9, 
+      "Test_n-Par_n": 10, 
+      "Phase-Test_v": 11, 
+      "Exp-Exp_r": 12
+  }, 
+  {
+      "0": "Con-Ele", 
+      "1": "Ele-Alloy", 
+      "2": "Alloy-Exp", 
+      "3": "Exp_r-Par_n", 
+      "4": "Exp-Par_n", 
+      "5": "Par_n-Par_v", 
+      "6": "Alloy-Test_n", 
+      "7": "Test_n-Test_f", 
+      "8": "Test_n-Test_v", 
+      "9": "Test_n-Phase", 
+      "10": "Test_n-Par_n", 
+      "11": "Phase-Test_v", 
+      "12": "Exp-Exp_r"
+  }
+]

@@ -21,7 +21,7 @@ class Configargs():
         self.dropout_prob = 0.1
         self.entity_pair_dropout = 0.2
 
-        self.dataset = "ASaIE"
+        self.dataset = "ASaIED"
         self.log = "log/{}_bert_log_test.log".format(self.dataset)
 
         self.max_word_num = 1     #最大词组数量

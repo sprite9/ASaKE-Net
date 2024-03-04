@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from dataloader.dataloader import REDataset, collate_fn
-from models.models import ASaKE
+from models.models import ASaRE
 from logger.logger import Logger
 from processors.processor import LEBertProcessor
 from transformers import BertTokenizer, BertConfig, get_linear_schedule_with_warmup
@@ -45,7 +45,7 @@ class Framework():
         #
         processor,bert_config=self.build_processor()
         #初始化模型
-        model = ASaKE(bert_config)  # 加载模型
+        model = ASaRE(bert_config)  # 加载模型
         model.word_embeddings.weight.data.copy_(torch.from_numpy(processor.word_embedding))
 
         ##############
@@ -57,7 +57,7 @@ class Framework():
         dev_dataloader = DataLoader(dev_dataset, batch_size=1, collate_fn=collate_fn)
 
         #t_total = (len(train_dataloader) // self.config.batch_size) * self.config.epochs
-        #model = ASaKE(self.config).to(self.device)   #加载模型
+        #model = ASaRE(self.config).to(self.device)   #加载模型
         optimizer = torch.optim.AdamW(model.parameters(), lr=self.config.learning_rate,eps=self.config.eps)
         #scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=self.config.warm_up_ratio * t_total, num_training_steps=t_total)
 
@@ -170,7 +170,7 @@ class Framework():
         dev_dataloader = DataLoader(dev_dataset, shuffle=True, batch_size=1, collate_fn=collate_fn, pin_memory=True)
         #模型加载
         print("load model......")
-        model = ASaKE(bert_config)  # 加载模型
+        model = ASaRE(bert_config)  # 加载模型
         #model.word_embeddings.weight.data.copy_(torch.from_numpy(processor.word_embedding))
         model.load_state_dict(torch.load(self.config.checkpoint, map_location=self.device))
         model.to(self.device)

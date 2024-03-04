@@ -1,5 +1,5 @@
-# ASaKE-Net
-ASaKE-Net: A Triple Knowledge Extraction Network for Chinese Literature on Al-Si Alloy
+# ASaRE-Net
+ASaRE-Net: A Triple Knowledge Extraction Network for Chinese Literature on Al-Si Alloy
 
 
 ## 环境  

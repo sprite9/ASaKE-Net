@@ -4,9 +4,9 @@ from torch.autograd import Variable
 from models.lebert import LEBertModel
 from config.config import Configargs
 
-class ASaKE(nn.Module):
+class ASaRE(nn.Module):
     def __init__(self,config):
-        super(ASaKE, self).__init__()
+        super(ASaRE, self).__init__()
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.configargs = Configargs()
         self.use_cuda=True

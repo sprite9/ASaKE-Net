@@ -1,4 +1,4 @@
-from models.models import ASaKE
+from models.models import ASaRE
 import torch
 from config.config import Configargs
 import numpy as np
@@ -18,7 +18,7 @@ id2label = json.load(open(config.schema_fn, "r", encoding="utf-8"))[1]
 id2tag = json.load(open(config.tags, "r", encoding="utf-8"))[1]
 
 tokenizer = BertTokenizer.from_pretrained(config.bert_path)
-model = ASaKE(config)
+model = ASaRE(config)
 model.load_state_dict(torch.load(config.checkpoint, map_location=device))
 model.to(device)
 model.eval()

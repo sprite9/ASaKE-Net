@@ -1,5 +1,5 @@
 # ASaRE-Net
-ASaRE-Net: A Triple Knowledge Extraction Network for Chinese Literature on Al-Si Alloy
+ASaRE-Net: Automatic information extraction from Al-Si alloy materials science literature for corpus construction
 
 
 ## 环境  
